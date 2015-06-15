@@ -141,6 +141,22 @@ Move it away, and try again.
 
 让你删除 `/usr/local/bin/wcj` 再 `npm link` ， 删除此目录运行 `rm -rf /usr/local/bin/wcj`
 
+## 发布安装
+
+### 发布到npm中
+发布必须注册 [npm](https://www.npmjs.com/) 账号，还有 [github](https://github.com/jaywcjlove) 账号，具体怎么玩儿问 谷歌大婶吧。
+
+```
+npm publish
+```
+
+### 安装
+前提你发布到了[npm](https://www.npmjs.com/)中，你就可以运行下面的命令了。
+
+```
+sudo npm install -g wcj
+```
+
 ## 阅读参考
 
 第一个小实例看了很多文章，记录一下，感觉非常简单的样子。
