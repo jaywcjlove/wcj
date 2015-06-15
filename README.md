@@ -86,14 +86,23 @@ run(process.argv.slice(2));
 
 `package.json` 文件中 `bin` 里面的内容表示这个字段将 `wcj` 命令映射到了你的 `bin/wcj.js` 脚本。 
 
+此工具采用 npm版本号采用的 [semver](http://semver.org/lang/zh-CN/) 规则
+
 ```
 "bin": { "wcj": "bin/wcj.js" }
 ```
 
 
 ## 全局运行命令调试
+> 确保你在 `package.json` 文件中添加了 `bin` 节点。然后打开命令了工具进入 `wcj` 
 
-确保你在 `package.json` 文件中添加了 `bin` 节点。然后打开命令了工具进入 `wcj` 目录输入 `npm link` 会自动添加全局的 `symbolic link` ，然后就可以使用自己的命令了。
+如果在项目目录下运行没有问题，可以将当前目录模块安装到全局，也可以采用此方法来更新你的命令行工具
+
+```
+sudo npm install . -g
+```
+
+或者目录输入 `npm link` 会自动添加全局的 `symbolic link` ，然后就可以使用自己的命令了。
 
 ```shell 
 $ wcj
@@ -111,6 +120,8 @@ $ cmd -h
 
 
 ## 错误
+
+在运行 `sudo npm install . -g` 会有一堆警告可以忽视
 
 如果你已经 `npm link` 搞了一遍你再 link 一遍，会报如下错误。即使你 `npm unlink` 也会报如下错误：
 
