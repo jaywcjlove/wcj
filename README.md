@@ -1,5 +1,6 @@
 wcj
 ---
+[![](https://img.shields.io/github/issues/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/issues) [![](https://img.shields.io/github/forks/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/network) [![](https://img.shields.io/github/stars/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/stargazers) [![](https://img.shields.io/github/release/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/releases)
 
 在使用 `Nodejs` 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。`Node.js` 中发现弄个命令行工具特别轻松，我来学习如何使用 `node.js` 生成自己的command命令，在未来的项目中方便自己。  
 
@@ -92,6 +93,7 @@ run(process.argv.slice(2));
 "bin": { "wcj": "bin/wcj.js" }
 ```
 
+[列子源码](https://github.com/jaywcjlove/wcj/blob/master/examples/ls.js)
 
 ## 全局运行命令调试
 
@@ -379,6 +381,69 @@ program.parse(process.argv);
     输出命令  wcj -l python
 ```
 
+## 像git风格一样的命令
+
+[列子源码](https://github.com/jaywcjlove/wcj/blob/master/examples/gitstyle.js)
+
+```
+#!/usr/bin/env node 
+var program = require('commander');
+var appInfo = require('./../package.json');
+
+program
+    .version(appInfo.version)
+    .usage('这里是我私人玩耍的命令哦！[options] <package>')
+
+//像git风格一样的子命令
+program
+    //子命令
+    .command('resume <cmd>')
+    //短命令 - 简写方式
+    .alias('rs')
+    //说明
+    .description('这里是我的简历详情！')
+    //resume的子命令
+    .option("-n, --name <mode>", "输出我的名字")
+    //注册一个callback函数
+    .action(function(cmd, options){
+        var nm = typeof options.name=='string'?options.name:""
+
+        console.log('resume "%s" 使用 %s 模式', cmd, nm);
+    }).on('--help', function() {
+        //这里输出子命令的帮助
+        console.log('  Examples:');
+        console.log('    运行方法：');
+        console.log('    $ ./bin/wcj.js resume ss -n aaaaa');
+        console.log('    $ ./bin/wcj.js resume ss');
+        console.log();
+    });
+
+program.parse(process.argv);
+```
+
+上面实例运行输出方式
+
+```
+$ ./bin/wcj.js resume ss -n aaaaa
+
+#输出：
+resume "ss" 使用 aaaaa 模式
+
+$ ./bin/wcj.js resume ss
+#输出：
+resume "aa" 使用  模式
+```
+
+## 事件监听
+
+命名多少个命令就监听多少命令，`--help` 为默认监听事件。
+
+```
+program.on('--help', function(argv,test){
+    process.exit(1);
+});
+```
+
 # 阅读参考
 
 第一个小实例看了很多文章，记录一下，感觉非常简单的样子。
@@ -388,5 +453,6 @@ program.parse(process.argv);
 - [使用Node.js创建命令行工具](http://zdan.me/post/2015/04/23/build-commands-with-nodejs.html)
 - [commander.js](https://github.com/tj/commander.js)
 - [commander.js例子](http://tj.github.io/commander.js/)
+- [node-optimist](https://github.com/substack/node-optimist)
 
 
