@@ -348,7 +348,7 @@ Commander会根据配置的option，sub-command等信息，自动生成help信�
 
 可以通过监听--help事件来输出额外的帮助信息，如下面给fe命令添加了一些examples
 
-```
+```js
 // must be before .parse() since node's emit() is immediate
 program.on('--help', function () {
     console.log('  自定义的例子:')
@@ -363,7 +363,7 @@ program.parse(process.argv);
 
 效果如下：
 
-```
+```shell
 ./bin/wcj.js -h
 
   Usage: wcj [options]
@@ -385,7 +385,7 @@ program.parse(process.argv);
 
 [列子源码](https://github.com/jaywcjlove/wcj/blob/master/examples/gitstyle.js)
 
-```
+```js
 #!/usr/bin/env node 
 var program = require('commander');
 var appInfo = require('./../package.json');
@@ -423,7 +423,7 @@ program.parse(process.argv);
 
 上面实例运行输出方式
 
-```
+```shell
 $ ./bin/wcj.js resume ss -n aaaaa
 
 #输出：
@@ -438,7 +438,7 @@ resume "aa" 使用  模式
 
 命名多少个命令就监听多少命令，`--help` 为默认监听事件。
 
-```
+```shell
 program.on('--help', function(argv,test){
     process.exit(1);
 });
