@@ -1,50 +1,50 @@
-#!/usr/bin/env node  
+#!/usr/bin/env node 
 var program = require('commander');
-
-// var fs = require("fs"),
-//     path = process.cwd();
-
-// var run= function (obj) {
-//     if(obj[0] === '-v'){
-//         console.log('version is 1.0.0');
-//     }else if(obj[0] === '-h'){
-//         console.log('Useage:');
-//         console.log('  -v --version [show version]');
-//     }else{
-//         fs.readdir(path, function(err, files){
-//             if(err){
-//                 return console.log(err);
-//             }
-//             for(var i = 0; i < files.length; i += 1){
-//                 console.log(files[i]);
-//             }
-//         });
-//     }
-// };
-// //获取除第一个命令以后的参数，使用空格拆分
-// run(process.argv.slice(2)); 
+var appInfo = require('./../package.json');
+var resume = require('../lib/resume.js');
+var log = console.log;
 
 program
-    .allowUnknownOption()
-    .version('0.0.1')
-    .option('-r, --resume', '简历')
-    .option('-d, --no-date', '不显示当前的日期')
-    .option('-l, --language <lang>', '这个语言是我擅长的语言。')
-    .option('-i, --idatabase <db>', '该数据库为我最擅长数据库', 'MySQL')
-    .parse(process.argv);
+    // .allowUnknownOption()//不报错误
+    .version(appInfo.version)
+    .usage('这里是我私人玩耍的命令哦！[options] <package>')
 
-if (program.resume) {
-    console.log('简历'
-        + '-'
-        + '这个是我的简历！'
-    );
-}
+program
+    .command('resume [cmd]')
+    .alias('rs')
+    .description('这里是我的简历详情！')
+    .option("-b, --basicinfo [type]", "基本信息")
+    .action(function(cmd, options){
+        var nm = typeof options.name=='string'?options.name:""
+        // log('resume "%s" 使用 %s 模式', cmd, nm);
+        // log("test:",program);
+        resume(cmd,options);
 
-if (program.language) console.log('language: 我擅长的语言`' + program.language + '`');
-if (program.database) console.log('db: 我擅长的语言`' + program.database + '`');
+    }).on('--help', function() {
+        log('  basicinfo 说明:');
+        log();
+        log('    -b, --basicinfo');
+        log('       name : 名字');
+        log('       height : 身高');
+        log('       dateOfBirth : 出生日期');
+        log('       workExperience : 工作经验');
+        log('       mobile : 手机号码');
+        log('       telephone : 电话号码');
+        log('       email : 邮箱地址');
+        log('       residency : 居住地点');
+        log('       currentSituation : 现状');
+        log('       currentCity : 当前城市');
+        log('       nation : 国家');
+        log('       region : 地区');
+        log('       postalCode : 邮编地址');
+        log('       ID : 身份证ID');
+        log('       website : 个人网赚');
+        log('       maritalStatus : 婚姻状况');
+        log('       politicalStatus : 政治面貌');
+        log('    $ wcj resume ss');
+        log();
+    });
 
-var dt = new Date();
-if (program.date) {
-    console.log(dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate());
-}
+    
 
+program.parse(process.argv);
