@@ -1,0 +1,104 @@
+{
+    "basicinfo":{
+        "_title" : "基本信息",
+        "data" : {
+            "name" : {
+                "info":"名字",
+                "val":"同一种调调"
+            },
+            "height" : {
+                "info":"身高",
+                "val":"172cm"
+            },
+            "dateOfBirth" : {
+                "info":"出生日期",
+                "val":"1987年04月03日"
+            },
+            "workExperience" : {
+                "info":"工作经验",
+                "val":"172cm"
+            },
+            "mobile" : {
+                "info":"手机号码",
+                "val":"136*****73"
+            },
+            "telephone" : {
+                "info":"电话",
+                "val":"021-6*******"
+            },
+            "email" : {
+                "info":"邮箱地址",
+                "val":"wowohoo@qq.com"
+            },
+            "residency" : {
+                "info":"居住地点",
+                "val":"上海市 青浦区"
+            },
+            "currentSituation" : {
+                "info":"现状",
+                "val":"在职"
+            },
+            "currentCity" : {
+                "info":"当前城市",
+                "val":"上海市"
+            },
+            "nation" : {
+                "info":"国家",
+                "val":"中国"
+            },
+            "region" : {
+                "info":"地区",
+                "val":"上海"
+            },
+            "postalCode" : {
+                "info":"邮编地址",
+                "val":"200073"
+            },
+            "ID" : {
+                "info":"身份证号码",
+                "val":"******19870403****"
+            },
+            "website" : {
+                "info":"个人网站",
+                "val":"http://JSLite.io"
+            },
+            "maritalStatus" : {
+                "info":"婚姻状况",
+                "val":"不告诉你"
+            },
+            "politicalStatus" : {
+                "info":"政治面貌",
+                "val":"-"
+            }
+        } 
+    },
+    "education":{
+        "_title" : "教育信息",
+        "data" : {
+            "timePeriod" : {
+                "info":"",
+                "val":""
+            },
+            "school" : {
+                "info":"",
+                "val":""
+            },
+            "major" : {
+                "info":"",
+                "val":""
+            },
+            "degree" : {
+                "info":"最高学历",
+                "val":"小学"
+            },
+            "description" : {
+                "info":"描述",
+                "val":""
+            },
+            "overseas" : {
+                "info":"海外经历",
+                "val":"No"
+            }
+        }
+    }
+}
