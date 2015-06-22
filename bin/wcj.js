@@ -12,8 +12,9 @@ program
 program
     .command('resume [cmd]')
     .alias('rs')
-    .description('这里是我的简历详情！')
+    .description('  这里是我的简历详情！')
     .option("-b, --basicinfo [type]", "基本信息")
+    .option("-e, --education [type]", "教育经历")
     .action(function(cmd, options){
         var nm = typeof options.name=='string'?options.name:""
         // log('resume "%s" 使用 %s 模式', cmd, nm);
@@ -23,7 +24,10 @@ program
     }).on('--help', function() {
         log('  basicinfo 说明:');
         log();
-        log('    -b, --basicinfo');
+        log('    preview -b  预览基本信息');
+        log('    preview -e  预览教育经历');
+        log();
+        log('    -b, --basicinfo 基本信息');
         log('       name : 名字');
         log('       height : 身高');
         log('       dateOfBirth : 出生日期');
@@ -41,7 +45,8 @@ program
         log('       website : 个人网赚');
         log('       maritalStatus : 婚姻状况');
         log('       politicalStatus : 政治面貌');
-        log('    $ wcj resume ss');
+        log('    -e, --education 教育经历');
+        // log('    $ wcj resume ss');
         log();
     });
 
