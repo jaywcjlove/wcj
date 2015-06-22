@@ -2,7 +2,65 @@ wcj
 ---
 [![](https://img.shields.io/github/issues/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/issues) [![](https://img.shields.io/github/forks/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/network) [![](https://img.shields.io/github/stars/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/stargazers) [![](https://img.shields.io/github/release/jaywcjlove/wcj.svg)](https://github.com/jaywcjlove/wcj/releases)
 
-在使用 `Nodejs` 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。`Node.js` 中发现弄个命令行工具特别轻松，我来学习如何使用 `node.js` 生成自己的command命令，在未来的项目中方便自己。  
+这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。
+
+```shell
+# 全局安装
+$ npm install -g wcj 
+
+# 输出帮助
+$ wcj -h
+  Usage: wcj 这里是我私人玩耍的命令哦！[options] <package>
+
+
+  Commands:
+
+    resume|rs [options] [cmd]    这里是我的简历详情！
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+
+# 输出子命令帮助
+$ wcj rs -h
+  Usage: resume|rs [options] [cmd]
+
+    这里是我的简历详情！
+
+  Options:
+
+    -h, --help              output usage information
+    -b, --basicinfo [type]  基本信息
+    -e, --education [type]  教育经历
+
+  basicinfo 说明:
+
+    preview -b  预览基本信息
+    preview -e  预览教育经历
+
+    -b, --basicinfo 基本信息
+       name : 名字
+       height : 身高
+       dateOfBirth : 出生日期
+       workExperience : 工作经验
+       mobile : 手机号码
+       telephone : 电话号码
+       email : 邮箱地址
+       residency : 居住地点
+       currentSituation : 现状
+       currentCity : 当前城市
+       nation : 国家
+       region : 地区
+       postalCode : 邮编地址
+       ID : 身份证ID
+       website : 个人网赚
+       maritalStatus : 婚姻状况
+       politicalStatus : 政治面貌
+    -e, --education 教育经历
+```
+
+在使用 `Nodejs` 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。在`Node.js` 中发现弄个命令行工具特别轻松，我来学习如何使用 `Node.js` 生成自己的command命令，在未来的项目中方便自己。  
 
 - 先弄个小实例感受一下命令行的魅力
 - 再用命令行实现输出自己的简历（我觉得这个可能很有趣）
@@ -99,11 +157,15 @@ run(process.argv.slice(2));
 
 > 确保你在 `package.json` 文件中添加了 `bin` 节点。然后打开命令了工具进入 `wcj` 目录 
 
+### install
+
 如果在项目目录下运行没有问题，可以将当前目录模块安装到全局，也可以采用此方法来更新你的命令行工具
 
 ```
 sudo npm install . -g
 ```
+
+### link
 
 或者目录输入 `npm link` 会自动添加全局的 `symbolic link` ，然后就可以使用自己的命令了。
 
@@ -122,7 +184,7 @@ $ cmd -h
 ```
 
 
-## 错误
+### 错误处理
 
 在运行 `sudo npm install . -g` 会有一堆警告可以忽视
 
