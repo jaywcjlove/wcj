@@ -1,6 +1,6 @@
 {
     "basicinfo":{
-        "_title" : "基本信息",
+        "title" : "基本信息",
         "data" : {
             "name" : {
                 "info":"名字",
@@ -73,32 +73,59 @@
         } 
     },
     "education":{
-        "_title" : "教育信息",
-        "data" : {
-            "timePeriod" : {
-                "info":"",
-                "val":""
-            },
-            "school" : {
-                "info":"",
-                "val":""
-            },
-            "major" : {
-                "info":"",
-                "val":""
-            },
-            "degree" : {
-                "info":"最高学历",
-                "val":"小学"
-            },
-            "description" : {
-                "info":"描述",
-                "val":""
-            },
-            "overseas" : {
-                "info":"海外经历",
-                "val":"No"
+        "title" : "教育经历",
+        "data" : [
+            {
+                "timePeriod" : {
+                    "info":"时间",
+                    "val":"2011年9月 到 2014年7月"
+                },
+                "school" : {
+                    "info":"学校",
+                    "val":"野鸟大学"
+                },
+                "major" : {
+                    "info":"专业",
+                    "val":"计算机专业"
+                },
+                "degree" : {
+                    "info":"学历",
+                    "val":"大学"
+                },
+                "description" : {
+                    "info":"描述",
+                    "val":"计算机组成原理、汇编语言、操作系统、数据结构、数据库原理及应用、计算机接口技术、微机系统维护与维修、单片机原理与应用、网络技术、多媒体技术及应用、软件工程等。"
+                },
+                "overseas" : {
+                    "info":"海外学习经历",
+                    "val":"没有"
+                }
+            },{
+                "timePeriod" : {
+                    "info":"时间",
+                    "val":"2003年9月 到 2006年8月"
+                },
+                "school" : {
+                    "info":"学校",
+                    "val":"野鸟高中"
+                },
+                "major" : {
+                    "info":"专业",
+                    "val":"艺术类"
+                },
+                "degree" : {
+                    "info":"学历",
+                    "val":"高中"
+                },
+                "description" : {
+                    "info":"描述",
+                    "val":"玩儿玩儿艺术"
+                },
+                "overseas" : {
+                    "info":"海外学习经历",
+                    "val":"没有"
+                }
             }
-        }
+        ]
     }
 }
