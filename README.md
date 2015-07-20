@@ -5,8 +5,8 @@ wcj
 这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。
 
 ```shell
-# 全局安装
-$ npm install -g wcj 
+# 全局安装，安装报错是需要前面加上sudo
+$ sudo npm install -g wcj 
 
 # 输出帮助
 $ wcj -h
