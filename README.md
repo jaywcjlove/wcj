@@ -506,6 +506,30 @@ program.on('--help', function(argv,test){
 });
 ```
 
+# yargs
+
+命令行框架 `yargs` 和你的程序实现交互 [yargs for github](https://github.com/bcoe/yargs)  
+
+```js 
+var argv = require('yargs').argv;
+if (argv.l == 'zh-cn') {
+    console.log('Chinese site!');
+}else if(argv.l == 'en') {
+    console.log('English website!');
+}
+```
+
+使用 
+
+```shell 
+var argv = require('yargs').argv;
+if (argv.l == 'zh-cn') {
+    console.log('Chinese site!');
+}else if(argv.l == 'en') {
+    console.log('English website!');
+}
+```
+
 # 阅读参考
 
 第一个小实例看了很多文章，记录一下，感觉非常简单的样子。
