@@ -24,6 +24,7 @@ $ wcj -h
 
 # 输出子命令帮助
 $ wcj rs -h
+
   Usage: resume|rs [options] [cmd]
 
     这里是我的简历详情！
@@ -36,8 +37,7 @@ $ wcj rs -h
 
   basicinfo 说明:
 
-    preview -b  预览基本信息
-    preview -e  预览教育经历
+    preview 预览简历
 
     -b, --basicinfo 基本信息
        name : 名字
