@@ -24,8 +24,7 @@ program
     }).on('--help', function() {
         log('  basicinfo 说明:');
         log();
-        log('    preview -b  预览基本信息');
-        log('    preview -e  预览教育经历');
+        log('    preview 预览简历');
         log();
         log('    -b, --basicinfo 基本信息');
         log('       name : 名字');
