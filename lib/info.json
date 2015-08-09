@@ -1,127 +1,191 @@
 {
     "basicinfo":{
-        "title" : "基本信息",
-        "data" : {
-            "name" : {
+        "title":"基本信息",
+        "data":{
+            "name":{
                 "info":"名字",
                 "val":"同一种调调"
             },
-            "height" : {
+            "gender":{
+                "info":"性别",
+                "val":"男"
+            },
+            "height":{
                 "info":"身高",
                 "val":"172cm"
             },
-            "dateOfBirth" : {
+            "dateOfBirth":{
                 "info":"出生日期",
                 "val":"1987年04月03日"
             },
-            "workExperience" : {
+            "workExperience":{
                 "info":"工作经验",
-                "val":"172cm"
+                "val":"5年以上工作经验"
             },
-            "mobile" : {
-                "info":"手机号码",
+            "mobile":{
+                "info":"手  机",
                 "val":"136*****73"
             },
-            "telephone" : {
+            "telephone":{
                 "info":"电话",
                 "val":"021-6*******"
             },
-            "email" : {
-                "info":"邮箱地址",
+            "email":{
+                "info":"E-mail",
                 "val":"wowohoo@qq.com"
             },
-            "residency" : {
-                "info":"居住地点",
+            "residency":{
+                "info":"居住地",
                 "val":"上海市 青浦区"
             },
-            "currentSituation" : {
+            "currentSituation":{
                 "info":"现状",
                 "val":"在职"
             },
-            "currentCity" : {
+            "currentCity":{
                 "info":"当前城市",
                 "val":"上海市"
             },
-            "nation" : {
+            "nation":{
                 "info":"国家",
                 "val":"中国"
             },
-            "region" : {
+            "region":{
                 "info":"地区",
                 "val":"上海"
             },
-            "postalCode" : {
-                "info":"邮编地址",
+            "postalCode":{
+                "info":"邮编",
                 "val":"200073"
             },
-            "ID" : {
+            "ID":{
                 "info":"身份证号码",
                 "val":"******19870403****"
             },
-            "website" : {
-                "info":"个人网站",
+            "website":{
+                "info":"首  页",
                 "val":"http://JSLite.io"
             },
-            "maritalStatus" : {
+            "maritalStatus":{
                 "info":"婚姻状况",
-                "val":"不告诉你"
+                "val":"未婚"
             },
-            "politicalStatus" : {
+            "politicalStatus":{
                 "info":"政治面貌",
                 "val":"-"
+            },
+            "hukou":{
+                "info":"户  口",
+                "val":"湖北黄冈"
             }
         } 
     },
-    "education":{
-        "title" : "教育经历",
-        "data" : [
+    "itskill":{
+        "title":"IT 技能",
+        "data":[
             {
-                "timePeriod" : {
+                "技能":"HTML",
+                "使用时间":"N",
+                "掌握程度":"精通",
+                "说明":"这…我写出来好吗？"
+            },{
+                "技能":"JavaScript",
+                "使用时间":"",
+                "掌握程度":"精通",
+                "说明":"好像挺熟练的。"
+            },{
+                "技能":"CoffeeScript",
+                "使用时间":"",
+                "掌握程度":"一般",
+                "说明":"偶尔使用一下，并非我写js的担当，不是重度使用者。"
+            },{
+                "技能":"CSS",
+                "使用时间":"",
+                "掌握程度":"精通",
+                "说明":"我选择使用Stylus写CSS"
+            },{
+                "技能":"ejs",
+                "使用时间":"",
+                "掌握程度":"精通",
+                "说明":"虽然 jade 也挺好，但是我只想要一个简单的帮我填充数据的模板。"
+            },{
+                "技能":"git",
+                "使用时间":"",
+                "掌握程度":"熟练",
+                "说明":"越来越喜欢Git，不在喜欢svn"
+            },{
+                "技能":"Photoshop",
+                "使用时间":"",
+                "掌握程度":"熟练",
+                "说明":"以前拿它混饭吃"
+            },{
+                "技能":"Node.js",
+                "使用时间":"",
+                "掌握程度":"略知",
+                "说明":"[express/mongodb/ejs/grunt/…]"
+            },{
+                "技能":"iOS/Mac开发",
+                "使用时间":"",
+                "掌握程度":"略知",
+                "说明":"在mac和iOS上做过一些小应用。"
+            },{
+                "技能":"PHP",
+                "使用时间":"",
+                "掌握程度":"略知",
+                "说明":"以前改过Discuz，写过企业网站，现在忘记了。"
+            }
+        ]
+    },
+    "education":{
+        "title":"教育经历",
+        "data":[
+            {
+                "timePeriod":{
                     "info":"时间",
                     "val":"2011年9月 到 2014年7月"
                 },
-                "school" : {
+                "school":{
                     "info":"学校",
                     "val":"野鸟大学"
                 },
-                "major" : {
+                "major":{
                     "info":"专业",
                     "val":"计算机专业"
                 },
-                "degree" : {
+                "degree":{
                     "info":"学历",
                     "val":"大学"
                 },
-                "description" : {
+                "description":{
                     "info":"描述",
                     "val":"计算机组成原理、汇编语言、操作系统、数据结构、数据库原理及应用、计算机接口技术、微机系统维护与维修、单片机原理与应用、网络技术、多媒体技术及应用、软件工程等。"
                 },
-                "overseas" : {
+                "overseas":{
                     "info":"海外学习经历",
                     "val":"没有"
                 }
             },{
-                "timePeriod" : {
+                "timePeriod":{
                     "info":"时间",
                     "val":"2003年9月 到 2006年8月"
                 },
-                "school" : {
+                "school":{
                     "info":"学校",
                     "val":"野鸟高中"
                 },
-                "major" : {
+                "major":{
                     "info":"专业",
                     "val":"艺术类"
                 },
-                "degree" : {
+                "degree":{
                     "info":"学历",
                     "val":"高中"
                 },
-                "description" : {
+                "description":{
                     "info":"描述",
                     "val":"玩儿玩儿艺术"
                 },
-                "overseas" : {
+                "overseas":{
                     "info":"海外学习经历",
                     "val":"没有"
                 }
