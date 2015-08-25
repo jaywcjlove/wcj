@@ -14,7 +14,7 @@ program
 program
     .command('resume [cmd]')
     .alias('rs')
-    .description('  这里是我的简历详情！')
+    .description(' Ⓦ Ⓒ Ⓙ 这里是我的简历详情！')
     .option("-b, --basicinfo [type]", "基本信息")
     .option("-e, --education [type]", "教育经历")
     .option("-i, --itskill   [type]", "IT技能")
@@ -25,9 +25,34 @@ program
         resume(cmd,options);
 
     }).on('--help', function() {
-        log('  basicinfo 说明:');
+
+        // 图片文字 http://ascii.mastervb.net/text_to_ascii.php
+
+        // log('█░░░█ █▀▀ ░░▀');
+        // log('█▄█▄█ █░░ ░░█');
+        // log('░▀░▀░ ▀▀▀ █▄█');
+
+        // log('Ⓦ Ⓒ Ⓙ');
+
+
+        log('            ╭╮');
+        log('   ╭╮╭╮╭┳━━╮╰╯');
+        log('   ┃╰╯╰╯┃╭━╯╭╮');
+        log('   ╰╮╭╮╭┫╰━╮┃┃');
+        log('    ╰╯╰╯╰━━╯┃┃');
+        log('           ╭╯┃');
+        log('           ╰━╯');
+
+        // log(' __     __     ______       __    ');
+        // log('/\\ \\  _ \\ \\   /\\  ___\\     /\\ \\   ');
+        // log('\\ \\ \\/ ".\\ \\  \\ \\ \\____   _\\_\\ \\  ');
+        // log(' \\ \\__/".~\\_\\  \\ \\_____\\ /\\_____\\ ');
+        // log('  \\/_/   \\/_/   \\/_____/ \\/_____/ ');
+
+
+        // log('  basicinfo 说明:');
         log();
-        log('    preview 预览简历');
+        log('    rs  预览简历');
         log();
         log('    -b, --basicinfo 基本信息');
         for (var a in basicinfo.data) {
