@@ -10,6 +10,11 @@
   "bin": {
     "wcj": "bin/wcj.js"
   },
+  "keywords": [
+    "wcj",
+    "commander",
+    "resume"
+  ],
   "author": "kenny wang <wowohoo@qq.com> ",
   "license": "MIT",
   "dependencies": {
