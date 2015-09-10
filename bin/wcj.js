@@ -64,6 +64,10 @@ program
         log();
     });
 
-    
+//默认不传参数输出help
+if (!process.argv[2]) {
+    program.help();
+    console.log();
+}
 
 program.parse(process.argv);
