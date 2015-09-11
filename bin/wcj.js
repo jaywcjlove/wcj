@@ -10,6 +10,7 @@ program
     // .allowUnknownOption()//不报错误
     .version(appInfo.version)
     .usage('这里是我私人玩耍的命令哦！[options] <package>')
+    .parse(process.argv);
 
 program
     .command('resume [cmd]')
