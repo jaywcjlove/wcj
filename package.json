@@ -1,13 +1,26 @@
 {
-  "name": "wcj",
-  "version": "1.0.0",
-  "description": "Node.js make command-line tool for learning .",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jaywcjlove/wcj.git"
-  },
-  "main": "index.js",
-  "bin": { "wcj": "bin/wcj.js" },
-  "author": "kenny wang <wowohoo@qq.com> ",
-  "license": "MIT"
+    "name": "wcj",
+    "version": "1.0.3",
+    "description": "Node.js make command-line tool for learning.",
+    "keywords": [
+        "wcj",
+        "command"
+    ],
+    "homepage": "http://JSLite.io",
+    "author": "jaywcjlove <398188662@qq.com>",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "licenses": "MIT",
+    "dependencies": {},
+    "devDependencies": {},
+    "license": "ISC",
+    "idoc": {
+        "todir": "/Applications/XAMPP/xamppfiles/htdocs/git/github.com/myJS/wcj/",
+        "theme": "default",
+        "md": [
+            "index.md"
+        ]
+    }
 }
