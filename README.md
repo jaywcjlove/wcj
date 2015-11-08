@@ -259,8 +259,8 @@ sudo npm install commander
 内置选项Built-in option，Commander 会为程序提供给一个默认的 `-h` option。
 
 ```js
+#!/usr/bin/env node
 var program = require("commander");
-
 program
   .version('0.0.1')
   .option('-r, --resume', '简历');
@@ -352,6 +352,7 @@ program
     .version('0.0.1')
     .option('-r, --resume', '简历')
     .option('-l, --language <lang>', '这个语言是我擅长的语言。')
+    .option('-d, --database [db]', '这个是我擅长的数据库', 'MySQL')
     .parse(process.argv);
 
 if (program.resume) {
