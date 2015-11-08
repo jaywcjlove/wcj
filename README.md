@@ -175,10 +175,10 @@ $ wcj
 #bin
 #package.json
 
-$ cmd -v
+$ wcj -v
 # version is 1.0.0
 
-$ cmd -h 
+$ wcj -h 
 #Useage:
 #  -v --version [show version]
 ```
@@ -259,6 +259,8 @@ sudo npm install commander
 内置选项Built-in option，Commander 会为程序提供给一个默认的 `-h` option。
 
 ```js
+#!/usr/bin/env node
+var program = require("commander");
 program
   .version('0.0.1')
   .option('-r, --resume', '简历');
@@ -312,7 +314,7 @@ if (program.resume) {
 当接收到未定义的option时，程序会自动抛出错误
 
 ```shell
-./bin/wcj.js -h
+./bin/wcj.js --res
 
 ## 输出下面内容
 error: unknown option '--res'
@@ -350,6 +352,7 @@ program
     .version('0.0.1')
     .option('-r, --resume', '简历')
     .option('-l, --language <lang>', '这个语言是我擅长的语言。')
+    .option('-d, --database [db]', '这个是我擅长的数据库', 'MySQL')
     .parse(process.argv);
 
 if (program.resume) {
