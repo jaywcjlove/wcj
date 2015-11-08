@@ -175,10 +175,10 @@ $ wcj
 #bin
 #package.json
 
-$ cmd -v
+$ wcj -v
 # version is 1.0.0
 
-$ cmd -h 
+$ wcj -h 
 #Useage:
 #  -v --version [show version]
 ```
@@ -259,6 +259,8 @@ sudo npm install commander
 内置选项Built-in option，Commander 会为程序提供给一个默认的 `-h` option。
 
 ```js
+var program = require("commander");
+
 program
   .version('0.0.1')
   .option('-r, --resume', '简历');
