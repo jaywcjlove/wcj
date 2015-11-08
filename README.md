@@ -314,7 +314,7 @@ if (program.resume) {
 当接收到未定义的option时，程序会自动抛出错误
 
 ```shell
-./bin/wcj.js -h
+./bin/wcj.js --res
 
 ## 输出下面内容
 error: unknown option '--res'
