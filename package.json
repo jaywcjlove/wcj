@@ -18,7 +18,7 @@
   "author": "kenny wang <wowohoo@qq.com> ",
   "license": "MIT",
   "dependencies": {
-    "cli-color": "^1.0.0",
+    "colors-cli": "^1.0.7",
     "commander": "^2.8.1"
   }
 }

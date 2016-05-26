@@ -1,5 +1,6 @@
 #!/usr/bin/env node 
 var program = require('commander');
+var color = require('colors-cli/toxic')
 var appInfo = require('./../package.json');
 var resume = require('../lib/resume.js');
 var info = require('./../lib/info.json');
@@ -15,7 +16,7 @@ program
 program
     .command('resume [cmd]')
     .alias('rs')
-    .description(' Ⓦ Ⓒ Ⓙ 这里是我的简历详情！')
+    .description(' Ⓦ Ⓒ Ⓙ 这里是我的简历详情！'.x29)
     .option("-b, --basicinfo [type]", "基本信息")
     .option("-e, --education [type]", "教育经历")
     .option("-i, --itskill   [type]", "IT技能")
@@ -36,13 +37,13 @@ program
         // log('Ⓦ Ⓒ Ⓙ');
 
 
-        log('            ╭╮');
-        log('   ╭╮╭╮╭┳━━╮╰╯');
-        log('   ┃╰╯╰╯┃╭━╯╭╮');
-        log('   ╰╮╭╮╭┫╰━╮┃┃');
-        log('    ╰╯╰╯╰━━╯┃┃');
-        log('           ╭╯┃');
-        log('           ╰━╯');
+        log('            ╭╮'.x93);
+        log('   ╭╮╭╮╭┳━━╮╰╯'.x93);
+        log('   ┃╰╯╰╯┃╭━╯╭╮'.x93);
+        log('   ╰╮╭╮╭┫╰━╮┃┃'.x93);
+        log('    ╰╯╰╯╰━━╯┃┃'.x93);
+        log('           ╭╯┃'.x93);
+        log('           ╰━╯'.x93);
 
         // log(' __     __     ______       __    ');
         // log('/\\ \\  _ \\ \\   /\\  ___\\     /\\ \\   ');
