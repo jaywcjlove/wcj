@@ -60,6 +60,39 @@ $ wcj rs -h
     -e, --education 教育经历
 ```
 
+# 目录
+
+
+- [学习出发点](#学习出发点)
+- [第一个小实例](#第一个小实例)
+  - [创建目录](#创建目录)
+  - [编写命令行](#编写命令行)
+  - [全局运行命令调试](#全局运行命令调试)
+    - [install](#install)
+    - [link](#link)
+    - [错误处理](#错误处理)
+  - [发布安装](#发布安装)
+    - [发布到npm中](#发布到npm中)
+    - [安装](#安装)
+- [Commander](#Commander)
+  - [特性](#特性)
+  - [API](#api)
+  - [安装commander](#安装commander)
+  - [Option](#Option)
+  - [Custom option](#custom-option)
+  - [Unknown option](#unknown-option)
+  - [Option types](#option-types)
+    - [required 和 optional](#required-和-optional)
+    - [bool](#bool)
+- [Automated](#automated)
+  - [Custom](#Custom)
+- [像git风格一样的命令](#像git风格一样的命令)
+- [事件监听](#事件监听)
+- [yargs](#yargs)
+- [阅读参考](#阅读参考)
+
+# 学习出发点
+
 在使用 `Nodejs` 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。在`Node.js` 中发现弄个命令行工具特别轻松，我来学习如何使用 `Node.js` 生成自己的command命令，在未来的项目中方便自己。  
 
 - 先弄个小实例感受一下命令行的魅力
@@ -70,7 +103,7 @@ $ wcj rs -h
   + 打开当前目录
 - 就先这么计划着吧。
 
-# 小实例
+# 第一个小实例
 
 开始编写之前需要确认的一件事情是你已经安装了[Node.js](https://nodejs.org/)。你可以在命令行中运行 `which node` 来确认是否已经安装，或者运行 `node -v` 查看 node 的版本 。如果你已经安装了node，你可以看到类似于下面的输出结果，一般情况安装了node.js 顺带npm工具自动安装了。
 
@@ -209,6 +242,7 @@ Move it away, and try again.
 ## 发布安装
 
 ### 发布到npm中
+
 发布必须注册 [npm](https://www.npmjs.com/) 账号，还有 [github](https://github.com/jaywcjlove) 账号，具体怎么玩儿问 谷歌大婶吧。在[JSLite.io](http://jslite.io) 中也有教程哦。
 
 ```
@@ -247,8 +281,7 @@ Commander的方便之处在于：
 
 参考：[官方文档例子](http://tj.github.io/commander.js)  
 
-## 安装
-安装commander
+## 安装commander
 
 ```
 sudo npm install commander
