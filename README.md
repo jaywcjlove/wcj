@@ -4,6 +4,41 @@ wcj
 
 这不仅是一篇教程，还是通过命令行输出我自己简历的一个工具O(∩_∩)O哈哈哈~，很有趣的样子哦。
 
+目录
+===
+
+<!-- TOC -->
+
+- [学习出发点](#学习出发点)
+- [第一个小实例](#第一个小实例)
+  - [创建目录](#创建目录)
+  - [编写命令行](#编写命令行)
+  - [全局运行命令调试](#全局运行命令调试)
+    - [install](#install)
+    - [link](#link)
+    - [错误处理](#错误处理)
+  - [发布安装](#发布安装)
+    - [发布到npm中](#发布到npm中)
+    - [安装](#安装)
+- [Commander](#commander)
+  - [特性](#特性)
+  - [API](#api)
+  - [安装commander](#安装commander)
+  - [Option](#option)
+  - [Custom option](#custom-option)
+  - [Unknown option](#unknown-option)
+  - [Option types](#option-types)
+    - [required 和 optional](#required-和-optional)
+    - [bool](#bool)
+  - [Automated --help](#automated---help)
+    - [Custom help](#custom-help)
+  - [像git风格一样的命令](#像git风格一样的命令)
+  - [事件监听](#事件监听)
+- [yargs](#yargs)
+- [阅读参考](#阅读参考)
+
+<!-- /TOC -->
+
 ```shell
 # 全局安装，安装报错是需要前面加上sudo
 $ sudo npm install -g wcj 
@@ -59,37 +94,6 @@ $ wcj rs -h
        politicalStatus : 政治面貌
     -e, --education 教育经历
 ```
-
-# 目录
-
-
-- [学习出发点](#学习出发点)
-- [第一个小实例](#第一个小实例)
-  - [创建目录](#创建目录)
-  - [编写命令行](#编写命令行)
-  - [全局运行命令调试](#全局运行命令调试)
-    - [install](#install)
-    - [link](#link)
-    - [错误处理](#错误处理)
-  - [发布安装](#发布安装)
-    - [发布到npm中](#发布到npm中)
-    - [安装](#安装)
-- [Commander](#Commander)
-  - [特性](#特性)
-  - [API](#api)
-  - [安装commander](#安装commander)
-  - [Option](#Option)
-  - [Custom option](#custom-option)
-  - [Unknown option](#unknown-option)
-  - [Option types](#option-types)
-    - [required 和 optional](#required-和-optional)
-    - [bool](#bool)
-- [Automated](#automated)
-  - [Custom](#Custom)
-- [像git风格一样的命令](#像git风格一样的命令)
-- [事件监听](#事件监听)
-- [yargs](#yargs)
-- [阅读参考](#阅读参考)
 
 # 学习出发点
 
